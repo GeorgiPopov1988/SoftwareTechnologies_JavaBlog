@@ -1,6 +1,5 @@
 package softuniBlog.controller;
 
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -8,16 +7,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import softuniBlog.bindingModel.ArticleBindingModel;
-import softuniBlog.config.BlogUserDetails;
 import softuniBlog.entity.Article;
 import softuniBlog.entity.User;
 import softuniBlog.repository.ArticleRepository;
 import softuniBlog.repository.UserRepository;
-import sun.plugin.liveconnect.SecurityContextHelper;
-
-import java.net.Inet4Address;
 
 @Controller
 public class ArticleControler {
